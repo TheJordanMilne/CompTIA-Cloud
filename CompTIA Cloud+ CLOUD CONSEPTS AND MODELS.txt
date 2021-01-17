@@ -1,0 +1,128 @@
+These are my notes from when I did my course on CompTIA Cloud+ through alison.com
+
+I hope these help you through your course. :) 
+__________________________________________________________________________________
+
+Cloud Benefits 
+
+Virtualization.
+	* Reduces foot print thus reducing energy to power equipment. 
+	* Enables you to grow when needed to. 
+	* Pay as you go ( grow )
+
+Problems with server based infrastructure.
+	* Physical hardware is required. 
+	* Individual Roles on servers will mean separate servers  e.g. Not best practice to install IIS on a DC. 
+	* Underused Servers. 
+	* Data is stored locally. 
+
+Advantages.
+	* Virtual Data centre. 
+	* Reduction in cost.
+	* Self service provisioning.
+	* Increase energy consciousness. 
+	* Improved resiliency.
+
+
+IaaS - Infrastructure as a Service. 
+
+	Cloud consumers outsources responsibility for the infrastructure to the cloud provider. This is usually used by IT Services.
+	Cloud Providers handles Storage, Computing power and connectivity domains. 
+	This provides loads of advantages
+	* Pay as you Go.
+	* Control over applications & operating systems. 
+	* Quickly scalable. 
+
+
+PaaS - Platform as a Service. 
+	Enable Customers to deploy applications without requiring the expense of the infrastructure. 
+	Customers purchase or create applications of the internet. This is often used by Developers. 
+
+SaaS - Software as a Service. 
+	Consumers take advantage of software delivery using the internet. It is an efficient way to deploy a line of business applications.
+	e.g. Office Productivity, Team Collab/ communications and Project Management. 
+	This is mainly used by end users. 
+
+DBaaS - DataBase as a Service. 
+	A form of software specializing in the automatic deliver of operations. 
+	several competencies are supported. 
+	* Self service provisioning of DataBase instances.
+	* Monitoring of DataBase attributes at QOS level. 
+	* Measured usage of DataBase.
+	* Additional Capabilities. 
+	* Service Multitenancy. 
+	* Service Elasticity.
+
+CaaS - Communications as a Service. 
+
+	Examples of these are VoIP, instant messaging and Audio video conferencing. 
+
+BPaaS 
+	This is generally Monitoring, I didn’t pay much attention on this bit as its rarely used. 
+
+XaaS - IT as a Service.
+	Delivery of IT as a Service through Hybrid cloud computing. Distribution of different IT Components in the cloud. 
+
+Accountability.
+
+	SaaS - Cloud Provider assumes responsibilty 
+	IaaS / PaaS - responsibility is distributed between consumer and the provider.
+
+
+PRIVATE CLOUD
+	Cloud delivery model owned by a single organization. It is implemented locally using privately owned resources. 
+	Its incorporated behind the firewall and maintained by the local IT Dept. 
+	
+Advantages 
+	* Maintain Control of the environment. 
+	* Scalability and Flexibility. 
+	* Auto Provisioning. ( pay for what you need)
+Disadvantages 
+	* Does not provide ROI like other delivery methods. 
+	* Required additional administrative overheads. 
+
+PUBLIC CLOUD
+	Its a pool of computing resources that is owned and managed by a service provider. 
+	Its offer Pay As You Go model which provides scalability and attitional options. e.g. Azure, AWS, HP Cloud...
+
+Advantages 
+	* Easy and inexpensive setup.
+	* You get for what you pay for, with grow capabilities. 
+	* Available to all organizations.
+Disadvantages 
+	* Security options might not be robust enough for all your data. 
+	* Lack of customization and admin access. 
+
+
+HYBRID CLOUD
+	Utilizes both Public and Private Cloud to handle distant functions for the organization. It involves two environments being setup.
+	Using multiple SaaS applictions sends data to private cloud. 
+
+COMMUNITY CLOUD
+	Infrastructures shared by multiple organizations. Built and operated for specific targeted groups that have same requirements. 
+	NHS or Government use this type of Cloud.
+	This provides a segregated approach for increased security. 
+	This can be located on and off premises. 
+
+On Premises - Provides greater control / Increases security. 
+Off Premises - Lower cost, providing pay as you grow options, perceived as less secure.  
+
+
+Pay As You Grow.
+	Organizations pay for services that are required on an hourly basis in relation to the amount of resources used. 
+	This does not require large upfront investment from companies. 
+
+
+Chargeback.
+	Accounting strategy that applies cost directly to the departments or teams that use resources. 
+
+Multitenancy.
+	Architecture that provides a single instance of an application to multiple clients (Tenants)
+	Tenants are unaware of the other Tenants on the same application and ensures that they are unable to access or change other Tenants Data. 
+	Typically used for SaaS.
+
+Cloud Bursting
+	Running and applicate on internal resources and "Bursting" to the public cloud on demand. "Short term way to increase your available cloud resources on demand"
+	Recommended to high performance non critical and non sensitive data. Requires organization to consider security.
+
+	
