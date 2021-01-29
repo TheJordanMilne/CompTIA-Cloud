@@ -1,0 +1,193 @@
+These are my notes from when I did my course on CompTIA Cloud+ through alison.com
+
+I hope these help you through your course. :) 
+__________________________________________________________________________________
+
+DISK TYPES AND CONFIGURATIONS
+
+Storage devices serve as the foundation of a storage network this is also a foundation of a cloud network.
+Disk performance is a key factor to the overall health of your cloud environment.
+Various types and configurations exist and characteristics must be understood. 
+
+Disk drive technology has advanced in significant ways and choosing the right disk type is important. 
+	* Size of Disk.
+	* Purpose of the disk.
+	* Evaluation of the business requirements.
+
+The term disk storage is generic and describes several different storage mechanisms storing data in different ways. 
+	* Electronic
+	* Magnetic
+	* Optical
+	* Mechanical
+Disk storage refers to a permanent type of storage where data is retained even when power is lost.
+	
+	Memory is referred as Primary Storage.
+	Disk storage is referred as Secondary Storage.
+
+A Hard Disk Drive (HDD) is a mechanical drive with specific characteristics.
+	* Individual platters coated in magnetic material.
+	* Read/Write heads hover over the surface to R/W data in specific areas.
+	* Drive density determines the amount of data stored.
+	* RPM determines the speed of access.
+This still remains the dominate secondary storage medium.
+
+INTERFACE TYPES
+
+Advances Technology Attachment 		(ATA)
+Parallel Advances Technology Attachment 	(PATA)
+Integrated Drive Electronics 			(IDE)
+Serial Advances Technology Attachment		(SATA)
+Small Computer System Interface 		(SCSI)
+Serial Attached SCSI				(SAS)
+
+
+Access Speed
+A critical components to understanding disk interfaces.
+The speed that a disk can access data is critical to performance. 
+This includes two main components. 
+	* Seek Time - The measure of how long it takes to find data.
+	* Latency - The measure of time delay it takes to properly position the read/write heads.
+
+Solid State Drive (SSD)
+
+High performance drives with no moving parts. 
+This is available in two types.
+	* Dynamic Ram "Used to have alternative power source"
+	* Flash Memory (vast majority today)
+Includes its own CPU and memory bus thus resulting in higher speeds. 
+Same I/O interfaces as mechanical drives with significant advantages.
+	* Faster access time & lower latency.
+	* Less susceptible to being dropped.
+	* Fast start-up time & less power consumption.
+	* Less risk of data loss.
+Disadvantages
+	* Cost.
+
+USB
+An External connection that support plug and play.
+Its highly portable.
+
+Tape
+Storage that reads and writes data to a magnetic tape. 
+Provides sequential data access.
+Primarily used for high volume low speed backups.
+
+Tiering
+Provides the ability to adjust the location of data based on performance and availability.
+Data can be moved from one tier automatically based on requirements. 
+
+
+Tier 1.
+	Mission Critical data.
+	Highly secure.
+	Recently accessed 
+	Recommended to use Raid with Parity. 
+
+Tier 2.
+	Data that runs major business applications
+	e.g. Emails Databases, ERP systems. 
+	Requires fast but not immediate response times. 
+
+Tier 3.
+	Includes archived data that must be kept but not accessed on a daily basis.
+
+Tier 4.
+	Used for compliance requirements, long term storage of email data large amount of data that does not need to be immediately access.  
+
+
+RAID 
+
+Disk Mirror - RAID 1 
+	Logical volume is created with two physical disks of the same size. Data is written directly to both disks.
+	Features good read / write performance, is able to sustain a single drive failure. 
+	Provides 50% compacity of the disk.
+	Raid 1 is primarily used for OS Drives e.g. C:\
+
+Disk Striping - Raid 0
+	Multiple disk collected into a single logical volume, data is striped across the physical disks in 64kb stripes.
+	No redundancy is provided. used to achieve high level of performance. 
+
+Raid 1+0 (10) 
+	A Hybrid arrangement consisting of a top level raid 0 that is composed of two or more raid 1 arrays.
+	Can sustain multiple drive failures. If a drive fails it will lower the mirror array into a Degraded state, but this will function as normal. 
+
+Raid 0+1 
+	Same as Raid 10 but the other way round, longer recovery periods due to the need to rebuild stripe sets. It is a less common of the hybrid raid. 
+
+Striped set with Parity - Raid 5
+	Combines multiple drives at least 3 into a logical drive. Great balance of data protection, performance and cost effectiveness.
+	Able to sustain a single drive failure, 
+Raid 6 - double parity
+	Allows for multiple drive failures, lowers the performance, ideal for situations where additional failover tolerance is required.
+
+File Systems 
+	A file system is responsible for various aspects of storage.
+	* Storing and updating files, retrieving files. 
+	* Managing and accessing metadata
+	* Managing disk space. 
+	
+Unix File System (UFS)
+	Primary file systems for Unix using hierarchical file system structure, the highest level is root. 
+	All files are related to one and other in parent child relationships and additional directories are called sub directories. 
+
+File Allocation Table (FAT)
+	Legacy file system providing good performance does not provide reliability and scalability of newer file systems. Supports variety of removable media types. 
+
+New Technology File System (NTFS)
+	Proprietary file system developed by Microsoft, introduced in the 90s with WindowsNT provides numerous advantages over Fat32.
+	* Compression 	* Shadow Copies
+	* Disk Quotas	* Local Security & Encryption.
+
+Virtual Machine File System (VMFS)
+	VMware Cluster system, used with ESX and VMSphere Servers. Provides the ability for multiple servers to read and write data from the drive simultaneously. 
+	Keeps individual VM files locked for one host server. Multiple volumes can be spanned logically increasing space.
+
+Z File System. 
+	Its a combined file system and logical volume manager developed by sun microsystems, it provides high storage 	capabilities and protection against data corruption. 
+	Created with data integrity as its primary focus. Only 128-bit file system using polled storage. 
+
+Storage Technologies
+	Direct Attached Storage - DAS
+	Most common type of storage including disks physically attached to a certain server. 
+	Used in small or single server environments. 
+	Available in block and file level access. 
+	It is not scalable as storage is not accessible by multiple servers.
+
+Network Attached Storage - NAS
+	Provides network based shared storage in a cost effective manner.
+		* Uses file level access protocols
+
+Storage Area Network - (SAN)
+	High Performance Storage Solution used in a majority of data centres and cloud environments. 
+	* Highly Scalable 	* Highly Available 	* Accessible to multiple servers.
+	
+	A storage device residing on its own private storage network. Its provides block level access to use as storage for clients. 
+	Disks on a SAN appear to clients as a disk drive identified by a logical drive unit number (LUN)
+	Additional adapters are required in order to access the SAN.
+		* Known as HBA Host Bus Adapters. * Virtual HBA
+	Each HBA hosts a unique identifier known as World Wide Number (WWN) 
+		* 8 byte number, node wwn, port wwn. 
+
+Access Methods
+
+	Fibre Chanel (FC)
+	Technology for transmitting storage up to 10Gbps.
+	Components consist of SAN, Physical or Virtual system containing HBA card, Fibre Channel Switches.
+	
+	Fibre Chanel other Ethernet 
+	Provides the benefits of fibre channel in a more cost effective manner. 
+
+	Fibre Chanel will only be deployed if high speeds are seriously necessary. 
+
+	Topology Layouts 
+	* Arbitrated Loop
+	* Point to Point
+	* Switch Fabric.
+		
+ISCSI (Internet SCSI)
+	Typically relies on a typical standard ethernet network architecture. 
+	Uses TCP/IP and TCP Port 3260 to communicate.
+	
+	IP network ISCSI target servers that run on the storage device ISCSI initiator (Client) - software or Host adapter that provides access to targets
+	ISCSI IQN - Globally unique identifier used to address initiators and target on ISCSI network. 
+	ISCSI supports access to SCSI based storage.
